@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import logo from './images/logo.svg';
 
 function App() {
   return (
   <div className="root">
     <header className="header root__section">
-      <img src="<%=require(./images/logo.svg)%>" alt="mesto logo" className="logo" />
+      <img src={logo} alt="mesto logo" className="logo" />
     </header>
     <div className="profile root__section">
       <div className="user-info">
