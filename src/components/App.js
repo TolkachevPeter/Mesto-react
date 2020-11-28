@@ -1,11 +1,9 @@
-import logo from './images/logo.svg';
+import Header from './Header'
 
 function App() {
   return (
   <div className="root">
-    <header className="header root__section">
-      <img src={logo} alt="mesto logo" className="logo" />
-    </header>
+      <Header />
     <div className="profile root__section">
       <div className="user-info">
         <div className="user-info__photo"></div>
