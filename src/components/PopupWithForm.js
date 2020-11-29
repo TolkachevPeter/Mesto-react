@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Main() {
+function PopupWithForm() {
     // function handleEditAvatarClick() {
     //     document.querySelector('#popup-edit').classList.toggle('popup_is-opened');
     // }
@@ -67,4 +67,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default PopupWithForm;
