@@ -1,6 +1,12 @@
 function Main() {
+    // function handleEditAvatarClick() {
+    //     document.querySelector('#popup-edit').classList.toggle('popup_is-opened');
+    // }
     function handleEditProfileClick() {
         document.querySelector('#popup-edit').classList.toggle('popup_is-opened');
+    }
+    function handleAddPlaceClick() {
+        document.querySelector('#popup-new').classList.toggle('popup_is-opened');
     }
 
   return (
@@ -13,7 +19,7 @@ function Main() {
           <p className="user-info__job">Sailor, Researcher</p>
           <button className="button user-info__button-edit" onClick={handleEditProfileClick}>Edit</button>
         </div>
-        <button className="button user-info__button">+</button>
+        <button className="button user-info__button" onClick={handleAddPlaceClick}>+</button>
       </div>
     </div>
     <div className="places-list root__section">
