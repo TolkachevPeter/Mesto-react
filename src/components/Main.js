@@ -29,7 +29,6 @@ function Main() {
     <div className="places-list root__section">
     </div>
     
-    <PopupWithForm/>
     </div>
   );
 }
