@@ -1,10 +1,10 @@
-import logo from '../images/logo.svg';
+
 
 function Footer() {
   return (
-    <header className="header root__section">
-      <img src={logo} alt="mesto logo" className="logo" />
-    </header>
+    <footer className='footer'>
+      <p className='footer__copyright'>&copy; 2020 Mesto Russia</p>
+    </footer>
   );
 }
 
