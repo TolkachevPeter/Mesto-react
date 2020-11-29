@@ -1,4 +1,8 @@
 function Main() {
+    function handleEditProfileClick() {
+        document.querySelector('#popup-edit').classList.toggle('popup_is-opened');
+    }
+
   return (
       <div>
     <div className="profile root__section">
@@ -7,7 +11,7 @@ function Main() {
         <div className="user-info__data">
           <h1 className="user-info__name">Jaques Causteau</h1>
           <p className="user-info__job">Sailor, Researcher</p>
-          <button className="button user-info__button-edit">Edit</button>
+          <button className="button user-info__button-edit" onClick={handleEditProfileClick}>Edit</button>
         </div>
         <button className="button user-info__button">+</button>
       </div>
