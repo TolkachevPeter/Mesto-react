@@ -1,6 +1,5 @@
 import React from 'react';
 import PopupWithForm from './PopupWithForm';
-import PopupWithForm from './PopupWithForm';
 
 function Main() {
     // function handleEditAvatarClick() {
@@ -28,7 +27,7 @@ function Main() {
     </div>
     <div className="places-list root__section">
     </div>
-    
+    <PopupWithForm />
     </div>
   );
 }
