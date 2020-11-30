@@ -4,9 +4,20 @@ import Main from './Main'
 import Footer from './Footer'
 
 class App extends React.Component {
-      //handleEditAvatarClick() {
-    //     document.querySelector('#popup-edit').classList.toggle('popup_is-opened');
-    // }
+  constructor(props) {
+    super(props);
+      this.state ={
+        isEditAvatarPopupOpen : false,
+        isEditProfilePopupOpen: false,
+        isAddPalcePopupOpen: false,
+      }
+  }
+
+    handleEditAvatarClick() {
+    this.setState({
+      isEditAvatarPopupOpen : true,
+    })
+    }
   handleEditProfileClick = () => {
       this.setState({
         isEditProfilePopupOpen: true,
