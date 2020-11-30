@@ -2,15 +2,7 @@ import React from 'react';
 import PopupWithForm from './PopupWithForm';
 
 function Main() {
-    // function handleEditAvatarClick() {
-    //     document.querySelector('#popup-edit').classList.toggle('popup_is-opened');
-    // }
-    function handleEditProfileClick() {
-        document.querySelector('#popup-edit').classList.toggle('popup_is-opened');
-    }
-    function handleAddPlaceClick() {
-        document.querySelector('#popup-new').classList.toggle('popup_is-opened');
-    }
+
 
   return (
       <div>

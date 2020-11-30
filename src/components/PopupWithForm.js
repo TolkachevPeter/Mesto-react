@@ -8,7 +8,7 @@ function PopupWithForm(props) {
     <div className="popup" id='popup-new'>
       <div className="popup__content">
         <img src="<%=require(./images/close.svg)%>" alt="" className="popup__close" />
-        <h3 className="popup__title">Новое место</h3>
+         <h3 className="popup__title">{props.title}</h3>
         <form className="popup__form" name={`${props.name}`}>
             <input id={`new-${props.name}`} type="text" name="name" className="popup__input popup__input_type_name" placeholder={`${props.name}`} minlength="2" required />
             <span id="error-new-name" className="error"></span>

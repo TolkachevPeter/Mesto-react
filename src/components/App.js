@@ -3,7 +3,22 @@ import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
 
-function App() {
+class App extends React.Component {
+      //handleEditAvatarClick() {
+    //     document.querySelector('#popup-edit').classList.toggle('popup_is-opened');
+    // }
+  handleEditProfileClick = () => {
+      this.setState({
+        isEditProfilePopupOpen: true,
+      })
+  };
+  handleAddPlaceClick = () => {
+    this.setState({
+      isAddPalcePopupOpen: true,
+    })
+  };
+
+  render() {
   return (
   <div className="root">
       <Header />
@@ -11,6 +26,7 @@ function App() {
       <Footer />
   </div>
   );
+};
 }
 
 export default App;
