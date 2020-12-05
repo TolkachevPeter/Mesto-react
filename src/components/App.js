@@ -35,6 +35,15 @@ class App extends React.Component {
     })
   };
 
+  closeAllPopups = () => {
+    this.setState({
+      isEditAvatarPopupOpen : false,
+      isEditProfilePopupOpen: false,
+      isAddPalcePopupOpen: false,
+      isOpen: false
+    })
+  }
+
   render() {
   return (
   <div className="root">
@@ -43,6 +52,7 @@ class App extends React.Component {
       onEditProfile={this.handleEditProfileClick}
       onAddPlace={this.handleAddPlaceClick}
       isOpen={this.state.isOpen}
+      onClose={this.closeAllPopups}
       />
       <Footer />
   </div>

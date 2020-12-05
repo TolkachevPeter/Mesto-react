@@ -7,7 +7,8 @@ function Main(props) {
     isOpen,
     onEditProfile,
     onAddPlace,
-    onEditAvatar
+    onEditAvatar,
+    onClose
   } = props;
 
 
@@ -27,7 +28,8 @@ function Main(props) {
     <div className="places-list root__section">
     </div>
     <PopupWithForm
-    isOpen={isOpen} />
+    isOpen={isOpen}
+    onClose={onClose} />
     </div>
   );
 }

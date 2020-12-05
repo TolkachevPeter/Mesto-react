@@ -5,7 +5,8 @@ function PopupWithForm(props) {
   const {
     title,
     name,
-    isOpen
+    isOpen,
+    onClose
   } = props;
 
   return (
@@ -14,7 +15,7 @@ function PopupWithForm(props) {
     <div className={`popup poup_type_${name} ${isOpen && 'popup_is-opened'}`}>
       {(isOpen ? console.log(isOpen) : console.log(`no`))}
       <div className="popup__content">
-        <img src={close} alt="" className="popup__close" />
+        <img src={close} alt="" className="popup__close" onClick={onClose}/>
          <h3 className="popup__title">{title}</h3>
         <form className="popup__form" name={`${name}`}>
             <input id={`new-${name}`} type="text" name="name" className="popup__input popup__input_type_name" placeholder={`${name}`} minlength="2" required />
