@@ -2,20 +2,23 @@ import React from 'react';
 
 function PopupWithForm(props) {
   const {
+    title,
+    name,
     isOpen
   } = props;
 
   return (
       <div>
 
-    <div className={`popup poup_type_${props.name}` + (props.isOpen ? 'popup_opened' : '')}>
+    <div className={`popup poup_type_${name} ${isOpen && 'popup_is-opened'}`}>
+      {(isOpen ? console.log(isOpen) : console.log(`no`))}
       <div className="popup__content">
         <img src="<%=require(./images/close.svg)%>" alt="" className="popup__close" />
-         <h3 className="popup__title">{props.title}</h3>
-        <form className="popup__form" name={`${props.name}`}>
-            <input id={`new-${props.name}`} type="text" name="name" className="popup__input popup__input_type_name" placeholder={`${props.name}`} minlength="2" required />
+         <h3 className="popup__title">{title}</h3>
+        <form className="popup__form" name={`${name}`}>
+            <input id={`new-${name}`} type="text" name="name" className="popup__input popup__input_type_name" placeholder={`${name}`} minlength="2" required />
             <span id="error-new-name" className="error"></span>
-            <input type="url" name="link" className="popup__input popup__input_type_link-url" placeholder={`${props.name}`} required />
+            <input type="url" name="link" className="popup__input popup__input_type_link-url" placeholder={`${name}`} required />
             <span id="error-new-link" className="error"></span>
             <button type="submit"  className="button popup__button popup__button_plus popup__button_invalid" disabled='true'>Сохранить</button>
         </form>

@@ -4,6 +4,7 @@ import PopupWithForm from './PopupWithForm';
 function Main(props) {
 
   const {
+    isOpen,
     onEditProfile,
     onAddPlace,
     onEditAvatar
@@ -26,7 +27,7 @@ function Main(props) {
     <div className="places-list root__section">
     </div>
     <PopupWithForm
-    isOpen={onEditProfile} />
+    isOpen={isOpen} />
     </div>
   );
 }
