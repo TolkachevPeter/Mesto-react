@@ -41,7 +41,7 @@ class App extends React.Component {
       <Header />
       <Main 
       onEditProfile={this.handleEditProfileClick}
-      onAddPalce={this.handleAddPlaceClick}
+      onAddPlace={this.handleAddPlaceClick}
       isOpen={this.state.isOpen}
       />
       <Footer />

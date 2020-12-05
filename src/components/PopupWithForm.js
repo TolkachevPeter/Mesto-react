@@ -1,4 +1,5 @@
 import React from 'react';
+import close from '../images/close.svg'
 
 function PopupWithForm(props) {
   const {
@@ -13,7 +14,7 @@ function PopupWithForm(props) {
     <div className={`popup poup_type_${name} ${isOpen && 'popup_is-opened'}`}>
       {(isOpen ? console.log(isOpen) : console.log(`no`))}
       <div className="popup__content">
-        <img src="<%=require(./images/close.svg)%>" alt="" className="popup__close" />
+        <img src={close} alt="" className="popup__close" />
          <h3 className="popup__title">{title}</h3>
         <form className="popup__form" name={`${name}`}>
             <input id={`new-${name}`} type="text" name="name" className="popup__input popup__input_type_name" placeholder={`${name}`} minlength="2" required />
