@@ -86,4 +86,14 @@ export default class Api {
         headers: this.headers
       }
     }
+
+    updateAvatar(avatar) {
+      return fetch(this.baseUrl + this.profileUrl + `/avatar`), {
+        method: 'PATCH',
+        headers: this.headers,
+        body: JSON.stringify({
+          avatar: avatar.url,
+        })
+      }
+    }
 }
