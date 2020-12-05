@@ -61,4 +61,29 @@ export default class Api {
         return Promise.reject(`Ошибка: ${res.status}`);
       })
     }
+
+    addNewCard(newCard) {
+      return fetch(this.baseUrl + this.cardsUrl), {
+        method: 'PATCH',
+        headers: this.headers,
+        body: JSON.stringify({
+          name: newCard.name,
+          link: newCard.link,
+        })
+      }  
+    }
+
+    changeLikeStatus(id, isLiked) {
+      return fetch(this.baseUrl + `cards/likes/${id}`), {
+        method: `${isLiked ? 'PUT' : 'DELETE'}`,
+        headers: this.headers
+      }
+    }
+
+    deleteCard(id) {
+      return fetch(this.baseUrl + `cards/${id}`), {
+        method: 'DELETE',
+        headers: this.headers
+      }
+    }
 }
