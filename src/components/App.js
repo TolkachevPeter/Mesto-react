@@ -33,7 +33,10 @@ class App extends React.Component {
   return (
   <div className="root">
       <Header />
-      <Main />
+      <Main 
+      onEditProfile={this.handleEditProfileClick}
+      onAddPalce={this.handleAddPlaceClick}
+      />
       <Footer />
   </div>
   );

@@ -1,7 +1,13 @@
 import React from 'react';
 import PopupWithForm from './PopupWithForm';
 
-function Main() {
+function Main(props) {
+
+  const {
+    onEditProfile,
+    onAddPlace,
+    onEditAvatar
+  } = props;
 
 
   return (
@@ -12,14 +18,15 @@ function Main() {
         <div className="user-info__data">
           <h1 className="user-info__name">Jaques Causteau</h1>
           <p className="user-info__job">Sailor, Researcher</p>
-          <button className="button user-info__button-edit" onClick={handleEditProfileClick}>Edit</button>
+          <button className="button user-info__button-edit" onClick={onEditProfile}>Edit</button>
         </div>
-        <button className="button user-info__button" onClick={handleAddPlaceClick}>+</button>
+        <button className="button user-info__button" onClick={onAddPlace}>+</button>
       </div>
     </div>
     <div className="places-list root__section">
     </div>
-    <PopupWithForm />
+    <PopupWithForm
+    isOpen={onEditProfile} />
     </div>
   );
 }

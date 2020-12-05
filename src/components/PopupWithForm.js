@@ -1,11 +1,14 @@
 import React from 'react';
 
 function PopupWithForm(props) {
+  const {
+    isOpen
+  } = props;
 
   return (
       <div>
 
-    <div className="popup" id='popup-new'>
+    <div className={`popup poup_type_${props.name}` + (props.isOpen ? 'popup_opened' : '')}>
       <div className="popup__content">
         <img src="<%=require(./images/close.svg)%>" alt="" className="popup__close" />
          <h3 className="popup__title">{props.title}</h3>
