@@ -1,4 +1,6 @@
-export default class Api {
+import apiOptions from './utils.js'
+
+class Api {
     constructor({ baseUrl, headers }) {
       this.baseUrl = baseUrl;
       this.headers = headers;
@@ -97,3 +99,5 @@ export default class Api {
       }
     }
 }
+
+const api = new Api(apiOptions);
