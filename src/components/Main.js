@@ -1,6 +1,7 @@
 import React from 'react';
 import PopupWithForm from './PopupWithForm';
 import api from '../utils/api';
+import Card from './Card';
 
 
 function Main(props) {
@@ -14,6 +15,7 @@ function Main(props) {
   } = props;
 
   const [state, setState] = React.useState({ userName: '', userDesciption: '' });
+  const [cards, setCards] = React.useState([]);
 
   React.useEffect(() => {
     api
@@ -27,9 +29,19 @@ function Main(props) {
     .catch((err) => {
       console.log(err);
     })
-  })
+  }, [])
 
-
+  React.useEffect(() => {
+    api
+    .getInitialCards()
+    .then((cardData) => {
+      setCards(cardData)
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }, [])
+console.log(cards)
   return (
       <div>
     <div className="profile root__section">
@@ -48,6 +60,13 @@ function Main(props) {
     <PopupWithForm
     isOpen={isOpen}
     onClose={onClose} />
+    {cards.map((card) =>(
+    <Card
+    key={card._id}
+    card={card}
+    />
+      ))}
+
     </div>
   );
 }

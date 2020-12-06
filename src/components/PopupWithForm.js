@@ -17,11 +17,11 @@ function PopupWithForm(props) {
         <img src={close} alt="" className="popup__close" onClick={onClose}/>
          <h3 className="popup__title">{title}</h3>
         <form className="popup__form" name={`${name}`}>
-            <input id={`new-${name}`} type="text" name="name" className="popup__input popup__input_type_name" placeholder={`${name}`} minlength="2" required />
+            <input id={`new-${name}`} type="text" name="name" className="popup__input popup__input_type_name" placeholder={`${name}`} required />
             <span id="error-new-name" className="error"></span>
             <input type="url" name="link" className="popup__input popup__input_type_link-url" placeholder={`${name}`} required />
             <span id="error-new-link" className="error"></span>
-            <button type="submit"  className="button popup__button popup__button_plus popup__button_invalid" disabled='true'>Сохранить</button>
+            <button type="submit"  className="button popup__button popup__button_plus popup__button_invalid">Сохранить</button>
         </form>
         
       </div>
