@@ -13,7 +13,6 @@ function PopupWithForm(props) {
       <div>
 
     <div className={`popup poup_type_${name} ${isOpen && 'popup_is-opened'}`}>
-      {(isOpen ? console.log(isOpen) : console.log(`no`))}
       <div className="popup__content">
         <img src={close} alt="" className="popup__close" onClick={onClose}/>
          <h3 className="popup__title">{title}</h3>

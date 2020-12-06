@@ -1,7 +1,7 @@
 const apiOptions = {
-    baseUrl: 'https://praktikum.tk/cohort12',
+    baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-12',
     headers: {
-      authorization: 'cf9507e2-f20f-44ff-8a3f-06f8e0491d03',
+      authorization: 'b40f325a-73c8-493d-8833-d885268eb953',
       'Content-Type': 'application/json'
     }
   };
